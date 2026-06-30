@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorbi artik Dolfi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: #0a0a0f;
+      color: #e4e4e7;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 60% 40%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 30% 70%, rgba(168, 85, 247, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .transition-line {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .old-name {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #52525b;
+      text-decoration: line-through;
+      text-decoration-color: #ef4444;
+      text-decoration-thickness: 3px;
+    }
+
+    .arrow {
+      font-size: 2rem;
+      color: #6366f1;
+    }
+
+    .new-name {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #818cf8, #a78bfa, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #a1a1aa;
+      margin-bottom: 4rem;
+      max-width: 500px;
+    }
+
+    .reasons {
+      max-width: 640px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: left;
+      position: relative;
+    }
+
+    .reason {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.3s;
+    }
+
+    .reason:hover {
+      border-color: rgba(99, 102, 241, 0.3);
+    }
+
+    .reason h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #c4b5fd;
+      margin-bottom: 0.4rem;
+    }
+
+    .reason p {
+      font-size: 0.95rem;
+      color: #a1a1aa;
+    }
+
+    .footer {
+      padding: 3rem 2rem;
+      text-align: center;
+      color: #52525b;
+      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: #818cf8;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .old-name { font-size: 1.8rem; }
+      .new-name { font-size: 2.4rem; }
+      .transition-line { gap: 1rem; }
+      .tagline { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="transition-line">
+      <span class="old-name">Sorbi</span>
+      <span class="arrow">&rarr;</span>
+      <span class="new-name">Dolfi</span>
+    </div>
+    <p class="tagline">AI destekli egitim asistanin yeni ismiyle geliyor.</p>
+
+    <div class="reasons">
+      <div class="reason">
+        <h3>Neden isim degisikligi?</h3>
+        <p>Sorbi ismi marka tescil surecinde patent engelleriyle karsilasti. Buyumemizi surdurebilmek icin guclu ve tescile uygun yeni bir kimlik olusturuyoruz.</p>
+      </div>
+      <div class="reason">
+        <h3>Neden Dolfi?</h3>
+        <p>Dolfi, Turkce ve Ingilizce'de kolayca telaffuz edilebilen, akilda kalici ve kisa bir isim. Yunus (dolphin) cagrisimiyla zeka, oyunculuk ve rehberlik kavramlarini barindiriyor — tam da bir egitim asistaninin ruhuna uygun.</p>
+      </div>
+      <div class="reason">
+        <h3>Ne degisiyor?</h3>
+        <p>Sadece isim. Sorbi'nin sunduklari — yapay zeka destekli soru cozumu, kocluk ve kisisellestirilmis ogrenme deneyimi — Dolfi ile aynen devam ediyor.</p>
+      </div>
+      <div class="reason">
+        <h3>Ne zaman?</h3>
+        <p>Gecis sureci basladi. Yeni markamizla cok yakinda karsinizdayiz.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Dolfi &mdash; Yapay zeka ile ogrenmenin yeni adi.</p>
+  </footer>
+</body>
+</html>
